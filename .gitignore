@@ -1,0 +1,7 @@
+*.iml
+*.iws
+*.ipr
+.idea
+node_modules
+npm-debug.log
+coverage

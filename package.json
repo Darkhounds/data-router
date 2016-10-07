@@ -1,0 +1,31 @@
+{
+  "name": "data-router",
+  "version": "1.0.1-rc2",
+  "description": "Object Data routing largely inspired on express routing pattern but decoupled from the request / response",
+  "main": "index.js",
+  "scripts": {
+    "tests": "mocha test/specs/ --recursive -R min -r ./test/setup.js || true",
+    "watch-tests": "watch 'npm run tests' src/ test/specs/ test/mockups --interval 2",
+    "coverage": "istanbul cover --dir ./coverage/ -x '**/mockups/**/*.*' ./node_modules/mocha/bin/_mocha -- test/specs/ --recursive -R min -r ./test/setup.js",
+    "watch-coverage": "watch 'npm run coverage' src/ test/specs/ test/mockups --interval 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/darkhounds/data-router.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/darkhounds/data-router/issues"
+  },
+  "homepage": "https://gitlab.com/darkhounds/data-router#README",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.0",
+    "mock-require": "^1.3.0",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0",
+    "watch": "^1.0.1"
+  }
+}
