@@ -1,3 +1,5 @@
-/**
- * Created by Cain on 10/7/2016.
- */
+var chai = require("chai");
+chai.should();
+
+var sinonChai = require("sinon-chai");
+chai.use(sinonChai);
