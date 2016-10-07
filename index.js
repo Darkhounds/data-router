@@ -1,3 +1,1 @@
-/**
- * Created by Cain on 10/7/2016.
- */
+module.exports = require('./src/data-router');
