@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/darkhounds/data-router.git"
+    "url": "git+ssh://git@github.com/Darkhounds/data-router.git"
   },
   "author": "",
   "license": "ISC",
