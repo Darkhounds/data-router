@@ -1,6 +1,6 @@
 {
   "name": "data-router",
-  "version": "1.0.1-rc4",
+  "version": "1.0.1-rc5",
   "description": "Object Data routing largely inspired on express routing pattern but decoupled from the request / response",
   "main": "index.js",
   "scripts": {
