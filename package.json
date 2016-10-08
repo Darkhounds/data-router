@@ -1,6 +1,6 @@
 {
   "name": "data-router",
-  "version": "1.0.1-rc3",
+  "version": "1.0.1-rc4",
   "description": "Object Data routing largely inspired on express routing pattern but decoupled from the request / response",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/darkhounds/data-router.git"
+    "url": "git+ssh://git@github.com/Darkhounds/data-router.git"
   },
   "author": "",
   "license": "ISC",
