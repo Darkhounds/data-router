@@ -142,5 +142,17 @@ describe('The DataRouter class', function () {
 
 			spy.should.not.have.been.called;
 		});
+
+		it('should inject extra arguments to the callback', function() {
+			var spy = sandbox.spy();
+			var data = { foo: 'bar'};
+			var foo = 'bar';
+			var bogus = 'pocus';
+
+			instance.register('foo', 'bar', spy);
+			instance.resolve(data, foo, bogus);
+
+			spy.should.have.been.calledWith(data, foo, bogus);
+		});
 	});
 });
