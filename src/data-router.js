@@ -22,20 +22,25 @@ Constructor.prototype.register = function (property, pattern, callback) {
 };
 
 Constructor.prototype.resolve = function (data) {
-	this._testRouteOn(data, 0);
+	var args = Array.from(arguments);
+
+	this._testRouteOn.call(this, 0, data, args);
 };
 
-Constructor.prototype._testRouteOn = function (data, id) {
+Constructor.prototype._testRouteOn = function (id, data, args) {
 	var route;
 
 	if (id < this._routes.length) {
 		route = this._routes[id || 0];
 
 		if (this._matchRoutePatternOn(data, route)) {
-			var next = this._testRouteOn.bind(this, data, ++id);
-			route.callback(data, next);
+			var next = this._testRouteOn.bind(this, ++id, data, args);
+
+			args.push(next);
+
+			route.callback.apply(this, args);
 		} else {
-			this._testRouteOn(data, ++id);
+			this._testRouteOn.call(this, ++id, data, args);
 		}
 	}
 };
